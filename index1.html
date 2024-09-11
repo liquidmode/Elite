@@ -76,6 +76,8 @@
 
             <label for="time">Time:</label>
             <input type="time" id="time" name="time" required>
+            <label for="location">LOCATION:</label>
+            <input type="location" id="location" name="location" required>
             </select>
 
             <button type="submit">Book Now</button>
@@ -91,11 +93,12 @@
             const email = document.getElementById('PhoneNumber').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
+            const location = document.getElementById('location').value;
 
             // Validation (basic check for required fields)
-            if (name && email && date && time && type) {
+            if (name && email && date && time && location && type) {
                 document.getElementById('confirmationMessage').innerText =
-                    `Thank you, ${name}! Your ${type} booking for ${date} at ${time} has been confirmed.`;
+                    `Thank you, ${name}! Your ${type} booking for ${date} at ${time} on ${location} has been confirmed.`;
             } else {
                 document.getElementById('confirmationMessage').innerText = 'Please fill out all fields.';
             }
